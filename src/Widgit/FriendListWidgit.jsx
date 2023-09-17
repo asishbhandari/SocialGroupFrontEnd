@@ -13,7 +13,7 @@ const FriendListWidgit = ({ userId }) => {
     const friends = useSelector((state) => state.user.friends);
 
     const getUserFriend = async () => {
-        const response = await fetch(`http://localhost:3001/verifiedUser/${userId}/friends`,
+        const response = await fetch(`https://social-group-backend.onrender.com/verifiedUser/${userId}/friends`,
         {
             method: "GET",
             headers: { Authorization : `Bearer ${token}`},

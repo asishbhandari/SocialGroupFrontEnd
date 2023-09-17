@@ -68,20 +68,20 @@ const Form=()=>{
         }
         formData.append('picturePath', values.picture.name)
 
-        const saveUserResponse= await fetch("http://localhost:3001/authentication/register",
+        const saveUserResponse= await fetch("https://social-group-backend.onrender.com/authentication/register",
         {
             method: "POST",
             body: formData,
         });
         const savedUser= await saveUserResponse.json();
         onSubmitProps.resetForm();
-        console.log(savedUser)
+        // console.log(savedUser)
 
         if(savedUser){
             setpagetype("login")
         }
         }catch(err){
-            console.log(err.message)
+            // console.log(err.message)
         }
         // try{
         //     const responseFromServer= await fetch("http://localhost:3001/")
@@ -94,7 +94,7 @@ const Form=()=>{
 
     const login = async (values, onSubmitProps)=>{
         // console.log(JSON.stringify(values))
-        const loggedUserResponse= await fetch("http://localhost:3001/authentication/login",
+        const loggedUserResponse= await fetch("https://social-group-backend.onrender.com/authentication/login",
         {
             method: "POST",
             headers:{'Content-Type':'application/json'},

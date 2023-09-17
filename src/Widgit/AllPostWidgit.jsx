@@ -12,7 +12,7 @@ const AllPostWidgit = ({loggeduserId, isProfile= false}) =>{
     const token= useSelector((state)=> state.token)
 
     const getPosts= async ()=>{
-        const response= await fetch('http://localhost:3001/posts',{
+        const response= await fetch('https://social-group-backend.onrender.com/posts',{
             method: 'GET',
             headers: {Authorization : `Bearer ${token}`},
         })
@@ -22,7 +22,7 @@ const AllPostWidgit = ({loggeduserId, isProfile= false}) =>{
     }
 
     const getUserPosts= async ()=>{
-        const response= await fetch(`http://localhost:3001/posts/${loggeduserId}/posts`,{
+        const response= await fetch(`https://social-group-backend.onrender.com/posts/${loggeduserId}/posts`,{
             method: 'GET',
             headers: {Authorization : `Bearer ${token}`},
         })

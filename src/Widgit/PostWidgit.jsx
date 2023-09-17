@@ -21,7 +21,7 @@ const PostWidgit= ({postId, postUserId, name, descripition, location, picturePat
     const primary= palette.primary.main;
    
     const patchLike= async()=>{ 
-        const likedposts= await fetch(`http://localhost:3001/posts/${postId}/like`,{
+        const likedposts= await fetch(`https://social-group-backend.onrender.com/posts/${postId}/like`,{
             method: "PATCH",
             headers: {Authorization: `Bearer ${token}`, "content-Type": "application/json"},
             body: JSON.stringify({userId: loggedUserId})
@@ -32,7 +32,7 @@ const PostWidgit= ({postId, postUserId, name, descripition, location, picturePat
     }
 
     const patchComment= async(e)=>{ 
-        const response= await fetch(`http://localhost:3001/posts/${postId}/comment`,{
+        const response= await fetch(`https://social-group-backend.onrender.com/posts/${postId}/comment`,{
             method: "PATCH",
             headers: {Authorization: `Bearer ${token}`, "content-Type": "application/json"},
             body: JSON.stringify({userId: loggedUserId, comment: comment})
@@ -54,7 +54,7 @@ const PostWidgit= ({postId, postUserId, name, descripition, location, picturePat
 
             {picturePath && (
                 <img 
-                    src={`http://localhost:3001/assets/${picturePath}`}
+                    src={`https://social-group-backend.onrender.com/assets/${picturePath}`}
                     width='100%' height='auto' alt="post"
                     style={{borderRadius:'0.75rem', marginTop:'0.75rem'}}
                 />

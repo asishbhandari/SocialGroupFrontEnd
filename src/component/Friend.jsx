@@ -22,7 +22,7 @@ const Friend= ({userPicturePath, name, location, friendId })=>{
     const isfriend = friends.find((friend)=> friend._id === friendId);
 
     const patchFriend= async ()=>{
-        const response= await fetch(`http://localhost:3001/verifiedUser/${_id}/${friendId}`,
+        const response= await fetch(`https://social-group-backend.onrender.com/verifiedUser/${_id}/${friendId}`,
         {
             method: "PATCH",
             headers: {

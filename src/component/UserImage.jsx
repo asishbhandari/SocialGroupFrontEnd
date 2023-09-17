@@ -6,7 +6,7 @@ const UserImage = ({image, size= "60px"})=>{
             <img 
                 style={{objectFit: 'cover', borderRadius: '50%'}}
                 width={size} height={size} alt="user"
-                src={`http://localhost:3001/assets/${image}`}
+                src={`https://social-group-backend.onrender.com/assets/${image}`}
                 // src="src/assets/1.jpg"
             />
         </Box>)

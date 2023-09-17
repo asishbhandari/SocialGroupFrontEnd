@@ -17,7 +17,7 @@ const UserWidgit = ({ userId, picturePath })=>{
     const main = palette.neutral.main;
 
     const getUser = async () => {
-        const response = await fetch(`http://localhost:3001/verifiedUser/${userId}`, {
+        const response = await fetch(`https://social-group-backend.onrender.com/verifiedUser/${userId}`, {
           method: "GET",
           headers: { Authorization: `Bearer ${token}` },
         });
@@ -89,7 +89,7 @@ const UserWidgit = ({ userId, picturePath })=>{
                 </Typography>
                 <Box  className="flexbetween">
                     <Box className="flexbetween" gap='0.75rem'>
-                        <img height='25px' width='30px' src={"http://localhost:3001/assets/instagram.png"} /> 
+                        <img height='25px' width='30px' src={"https://social-group-backend.onrender.com/assets/instagram.png"} /> 
                         <Typography color={medium}>
                             Instagram
                         </Typography>
@@ -99,7 +99,7 @@ const UserWidgit = ({ userId, picturePath })=>{
 
                 <Box  className="flexbetween">
                     <Box className="flexbetween" gap='0.75rem'>
-                        <img  height='30px' width='30px' src={"http://localhost:3001/assets/linkedin.png"}/> 
+                        <img  height='30px' width='30px' src={"https://social-group-backend.onrender.com/assets/linkedin.png"}/> 
                         <Typography color={medium}>
                             LinkedIn
                         </Typography>

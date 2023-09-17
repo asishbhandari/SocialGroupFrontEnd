@@ -20,7 +20,7 @@ const SponsersWidgit = () => {
             </Box>
             <img 
                 width="100%" height="auto"
-                src={`http://localhost:3001/assets/add1.jpg`}
+                src={`https://social-group-backend.onrender.com/assets/add1.jpg`}
                 style={{borderRadius: "0.75rem", margin: "0.75rem 0"}}
             />
             <Box className="flexbetween">

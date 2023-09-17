@@ -68,7 +68,7 @@ const NavBar = () => {
                         <Notifications sx={{ fontSize: '25px' }} />
                         <Help sx={{ fontSize: '25px' }} />
                         <Box className="flexbetween">
-                            <Avatar src={`http://localhost:3001/assets/${user.picturePath}`} />
+                            <Avatar src={`https://social-group-backend.onrender.com/assets/${user.picturePath}`} />
                             <FormControl>
                                 <Select
                                     value={fullname}

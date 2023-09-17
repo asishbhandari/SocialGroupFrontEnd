@@ -16,7 +16,7 @@ const ProfilePage =()=>{
     // const iswideScreen= useMediaQuery('(min-width: 1000px )');
 
     const getUser = async () => {
-        const response = await fetch(`http://localhost:3001/verifiedUser/${userId}`,
+        const response = await fetch(`https://social-group-backend.onrender.com/verifiedUser/${userId}`,
         {
             method: "GET",
             headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json"}
